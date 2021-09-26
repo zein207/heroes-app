@@ -2,10 +2,10 @@ import React from 'react';
 import { mount } from "enzyme";
 import '@testing-library/jest-dom';
 
-import { AuthContext } from '../../auth/AuthContext';
-import { Navbar } from '../../components/ui/Navbar';
+import { AuthContext } from '../../../auth/AuthContext';
+import { Navbar } from '../../../components/ui/Navbar';
 import { MemoryRouter, Router } from 'react-router';
-import { types } from '../../types/types';
+import { types } from '../../../types/types';
 
 describe('Test in <Navbar />', () => {
 
