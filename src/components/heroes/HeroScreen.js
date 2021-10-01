@@ -1,6 +1,9 @@
 import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
+import { heroImages } from '../../helpers/heroImages';
 import { getHeroById } from '../../selectors/getHeroById';
+
+// import batman from '../../assets/heroes/dc-batman.jpg'; // Import static source
 
 export const HeroScreen = ({ history }) => {
 
@@ -31,7 +34,9 @@ export const HeroScreen = ({ history }) => {
         <div className="row mt-5">
             <div className="col-4 animate__animated animate__backInLeft">
                 <img
-                    src={ `../assets/heroes/${ heroeId }.jpg` }
+                    // src={ `../assets/heroes/${ heroeId }.jpg` } // From public/assets
+                    // src={ batman } // Import
+                    src={ heroImages(`./${ heroeId }.jpg`).default }
                     alt={ superhero }
                     className="img-thumbnail"
                 />
